@@ -1,7 +1,8 @@
+#!/usr/bin/env elixir
 defmodule Week1 do
   def sum_fizzbuzz(0, acc), do: acc
 
-  def sum_fizzbuzz(current, acc) when rem(current, 3) * rem(current,5) == 0 do
+  def sum_fizzbuzz(current, acc) when rem(current, 3) == 0 or rem(current, 5) == 0 do
     sum_fizzbuzz(current-1, acc + current)
   end
 
@@ -18,9 +19,10 @@ defmodule Week1 do
 end
 
 
-Week1.go(10)
-Week1.go(1000)
+#Week1.go(10)
+#Week1.go(1000)
 
+Week1.go(10_000_000)
 # Output
 # $ elixir problem1.ex
 # Sum of fizzbuzz < 10 is 23

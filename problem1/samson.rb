@@ -1,3 +1,4 @@
+#!/usr/bin/env ruby
 class Week1
   def initialize(max)
     @max = max
@@ -24,9 +25,9 @@ class Fixnum
   end
 end
 
-Week1.new(10).go
-Week1.new(1000).go
-
+#Week1.new(10).go
+#Week1.new(1000).go
+Week1.new(1e7).go
 # Output
 # $ ruby problem1.rb
 # Sum of fizzbuzz < 10 is 23
